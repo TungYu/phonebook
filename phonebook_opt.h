@@ -5,8 +5,9 @@
 
 /* TODO: After modifying the original version, uncomment the following
  * line to set OPT properly */
-// #define OPT 1
-typedef struct __PHONE_BOOK_ENTRY {
+#define OPT 1
+
+typedef struct __OLD_PHONE_BOOK_ENTRY {
     char lastName[MAX_LAST_NAME_SIZE];
     char firstName[16];
     char email[16];
@@ -17,6 +18,12 @@ typedef struct __PHONE_BOOK_ENTRY {
     char city[16];
     char state[2];
     char zip[5];
+    struct __PHONE_BOOK_ENTRY *pNext;
+} old_entry;
+
+typedef struct __PHONE_BOOK_ENTRY {
+    char lastName[MAX_LAST_NAME_SIZE];
+    struct __OLD_PHONE_BOOK_ENTRY *pOld_entry;
     struct __PHONE_BOOK_ENTRY *pNext;
 } entry;
 
