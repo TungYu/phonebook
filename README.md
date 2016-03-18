@@ -15,3 +15,5 @@ Install Git pre-commit hook to check C/C++ source file format
 ```sh
 ln -sf ../../scripts/pre-commit.hook .git/hooks/pre-commit
 ```
+
+Hackpad:https://2016develope.hackpad.com/2016q1-GFlBjXern3P
