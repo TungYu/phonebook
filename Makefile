@@ -13,6 +13,10 @@ phonebook_orig: $(SRCS_common) phonebook_orig.c phonebook_orig.h
 		-DIMPL="\"$@.h\"" -o $@ \
 		$(SRCS_common) $@.c
 
+# cc -Wall -std=gun99 -O0 \
+#	-DIMPL="\"phonebook_orig.h\"" -o phonebook_orig \
+#	main.c phonebook_orig.c
+
 phonebook_opt: $(SRCS_common) phonebook_opt.c phonebook_opt.h
 	$(CC) $(CFLAGS_common) $(CFLAGS_opt) \
 		-DIMPL="\"$@.h\"" -o $@ \
